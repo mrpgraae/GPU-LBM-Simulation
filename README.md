@@ -41,3 +41,11 @@ The CPU version of the simulation was written with almost no thought to performa
 --- Visualization:
 
 The simulation has been visualized with the Pygame module. This is a very simple way of visualization and it slows down the simulation significantly for the GPU simulation, as it involves copying memory back and forth between main memory and GPU memory, every time a new frame should be drawn. Ideally, OpenGL should be used to visualize the simulation, to avoid the memory copies. The Pygame method works fine for illustrative purposes however.
+
+---------------
+Science-y stuff
+---------------
+
+The simulation was written with the 2DQ9 scheme of LBM. 2D was chosen, since 3D would take up an enormous amount of memory compared to 2D. Way too much to fit in the GPU memory, so another buffering method would have to be devised. The Bhatnager-Gross-Krook collision model was chosen as it seems to be the most used model and it is easily implemented.
+
+The reason for the choice of geometry is that this geometry clearly demonstrates the Kármán Vortex Street for appropiate fluid parameters, which was part of my motivation for doing the project. The simulation should be fairly easily converted to other geometries however, since one of the strenghts of LBM is that the basic implementation is fairly independent on geometry.

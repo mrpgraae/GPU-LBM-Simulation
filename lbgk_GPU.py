@@ -275,6 +275,8 @@ def main(lx, ly, numIters):
     if i == numIters:
       break
 
+  # Copy data back here if you need it.
+
 if __name__ == "__main__":
 
   if len(sys.argv) < 4:
